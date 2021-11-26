@@ -10,6 +10,7 @@ abstract class UseCase {
 
 class CatUseCase implements UseCase {
   late final CatRepository repository;
+  CatUseCase(this.repository);
 
   @override
   Future<Either<Failure, Uint8List>> getRandomGift() {

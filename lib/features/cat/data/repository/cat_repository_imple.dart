@@ -22,12 +22,12 @@ class CatRepositoryImple extends CatRepository {
       } on ApiResponseException catch (m) {
         return Left(ApiResponseFailure(message: m.message));
       } on TimeOutException {
-        return Left(TimeOutFailure());
+        return Left(TimeOutFailure(message: "timeout exception"));
       } catch (ex) {
-        return Left(ServerFailure());
+        return Left(ServerFailure(message: 'server exception'));
       }
     } else {
-      return Left(ServerFailure());
+      return Left(ServerFailure(message: "no internet conexion"));
     }
   }
 }
