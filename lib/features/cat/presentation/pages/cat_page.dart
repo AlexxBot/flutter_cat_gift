@@ -18,8 +18,6 @@ class _CatPageState extends State<CatPage> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    catRemoteData = CatRemoteData();
-    //_getRandomGift();
   }
 
   void _getRandomGift() {
