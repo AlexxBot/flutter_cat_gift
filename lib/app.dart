@@ -1,3 +1,4 @@
+import 'package:cat_gift/core/global.dart/theme_data.dart';
 import 'package:cat_gift/router.dart';
 import 'package:flutter/material.dart';
 
@@ -6,8 +7,9 @@ class CatApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
         debugShowCheckedModeBanner: false,
+        theme: customizedTheme,
         onGenerateRoute: RouteGenerator.generateRoute);
   }
 }

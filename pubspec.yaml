@@ -58,6 +58,10 @@ dev_dependencies:
 
 # The following section is specific to Flutter.
 flutter:
-   assets: 
+  assets: 
     - .env
+  fonts:
+    - family: sora
+      fonts:
+        - asset: fonts/Sora-VariableFont_wght.ttf
   

@@ -1,5 +1,6 @@
 import 'dart:typed_data';
 
+import 'package:cat_gift/core/global.dart/size_constants.dart';
 import 'package:flutter/material.dart';
 
 class CatGiftWidget extends StatelessWidget {
@@ -9,9 +10,23 @@ class CatGiftWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(15),
+        /* padding:
+            const EdgeInsets.symmetric(vertical: vspace, horizontal: hspace), */
+        decoration: const BoxDecoration(
+          //borderRadius: const BorderRadius.all(Radius.circular(borderRadius)),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.grey,
+              spreadRadius: 5,
+              blurRadius: 5,
+              offset: Offset(0, 5), // changes position of shadow
+            ),
+          ],
+          /* image: DecorationImage(
+                image: MemoryImage(gift), fit: BoxFit.fitWidth) */
         ),
-        child: Image.memory(gift));
+        child: Image.memory(
+          gift,
+        ));
   }
 }

@@ -46,10 +46,12 @@ class ButtonWidgetState extends State<ButtonWidget> {
     return IgnorePointer(
       ignoring: !widget.enabled,
       child: RawMaterialButton(
-          splashColor: Theme.of(context).scaffoldBackgroundColor,
+          splashColor: widget.enabled
+              ? Theme.of(context).scaffoldBackgroundColor
+              : Theme.of(context).scaffoldBackgroundColor.withOpacity(0.2),
           fillColor: widget.enabled
               ? Theme.of(context).primaryColor
-              : Theme.of(context).primaryColor.withOpacity(0.1),
+              : Theme.of(context).primaryColor.withOpacity(0.2),
           shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(widget.borderRadius)),
           padding: EdgeInsets.symmetric(
