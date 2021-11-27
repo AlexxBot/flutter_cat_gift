@@ -6,6 +6,8 @@ class CatApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(onGenerateRoute: RouteGenerator.generateRoute);
+    return const MaterialApp(
+        debugShowCheckedModeBanner: false,
+        onGenerateRoute: RouteGenerator.generateRoute);
   }
 }

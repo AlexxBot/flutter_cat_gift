@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider<CatBloc>(
       create: (context) => di.sl<CatBloc>(),
-      child: CatApp(),
+      child: const CatApp(),
     );
   }
 }
