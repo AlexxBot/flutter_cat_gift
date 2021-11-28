@@ -13,9 +13,3 @@ class ApiResponseException implements Exception {
   final String message;
   ApiResponseException({this.statusCode = 500, this.message = 'Api Exception'});
 }
-
-/* class CacheException implements Exception {
-  final String message;
-  CacheException({this.message = 'Local Storage Exception'});
-}
- */

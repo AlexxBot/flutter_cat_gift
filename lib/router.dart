@@ -12,7 +12,7 @@ class RouteGenerator {
       case catPage:
         return MaterialPageRoute(builder: (_) => const CatPage());
       default:
-        throw RouteException("Route not found");
+        throw const RouteException("Route not found");
     }
   }
 }

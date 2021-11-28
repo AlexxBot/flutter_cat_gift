@@ -1,5 +1,6 @@
 import 'dart:typed_data';
 
+import 'package:cat_gift/core/global.dart/size_constants.dart';
 import 'package:cat_gift/core/widgets/button_widget.dart';
 import 'package:cat_gift/core/widgets/snack_widget.dart';
 import 'package:cat_gift/features/cat/data/datasources/cat_remote_data.dart';
@@ -16,9 +17,7 @@ class CatPage extends StatefulWidget {
 }
 
 class _CatPageState extends State<CatPage> {
-  //late final CatRemoteData catRemoteData;
   late final CatBloc catBloc;
-  //Uint8List? _gift;
 
   @override
   void initState() {
@@ -38,7 +37,8 @@ class _CatPageState extends State<CatPage> {
         title: const Text('Cats'),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.only(
+            top: vspace, right: hspace, bottom: 50, left: hspace),
         child: Column(
           children: [
             Expanded(
@@ -60,7 +60,7 @@ class _CatPageState extends State<CatPage> {
                           return CatGiftWidget(gift: state.gift);
                         } else {
                           return const Text(
-                              'no gift provided!, press meow button');
+                              'No gift provided!, press meow button');
                         }
                       }),
                 ),

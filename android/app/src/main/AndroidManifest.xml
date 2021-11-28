@@ -1,5 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.cat_gift">
+   <uses-permission android:name="android.permission.INTERNET"/>
    <application
         android:label="cat_gift"
         android:icon="@mipmap/ic_launcher">
